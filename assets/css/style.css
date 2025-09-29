@@ -253,22 +253,26 @@ body {
 .nav-line {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .nav-commands {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    flex-wrap: nowrap;
+    gap: 8px;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .nav-cmd {
     color: var(--accent-blue);
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 3px 6px;
     border-radius: 4px;
     transition: all 0.3s ease;
     position: relative;
+    font-size: inherit;
 }
 
 .nav-cmd:hover {
@@ -848,8 +852,9 @@ body {
     }
     
     .nav-commands {
-        flex-direction: column;
-        gap: 10px;
+        gap: 6px;
+        overflow-x: auto;
+        padding-bottom: 5px;
     }
     
     .project-preview {
@@ -1024,4 +1029,13 @@ html {
 @keyframes cursor-blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
+}
+
+/* Section Configuration Utilities */
+.section-hidden {
+    display: none !important;
+}
+
+.nav-cmd.hidden {
+    display: none !important;
 }

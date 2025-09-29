@@ -1,5 +1,13 @@
 // Terminal Portfolio - Interactive JavaScript
 
+// ===== SECTION VISIBILITY CONFIGURATION =====
+// Set to false to hide sections, true to show them
+const SECTION_CONFIG = {
+    projects: false,    // Show/hide projects section
+    blog: false        // Show/hide blog section
+};
+// ============================================
+
 // Theme toggle functionality
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -44,9 +52,51 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// Apply section visibility based on configuration
+function applySectionConfig() {
+    const navCommands = document.querySelector('.nav-commands');
+    
+    // First, handle section visibility
+    Object.keys(SECTION_CONFIG).forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        const navLink = document.querySelector(`a[href="#${sectionId}"]`);
+        
+        if (section && navLink) {
+            if (SECTION_CONFIG[sectionId]) {
+                section.style.display = 'block';
+                navLink.style.display = 'inline';
+            } else {
+                section.style.display = 'none';
+                navLink.style.display = 'none';
+            }
+        }
+    });
+    
+    // Rebuild navigation to clean up pipes
+    if (navCommands) {
+        const allLinks = navCommands.querySelectorAll('.nav-cmd');
+        const visibleLinks = Array.from(allLinks).filter(link => 
+            window.getComputedStyle(link).display !== 'none'
+        );
+        
+        // Rebuild the navigation with proper separators
+        let newHTML = '';
+        visibleLinks.forEach((link, index) => {
+            newHTML += link.outerHTML;
+            if (index < visibleLinks.length - 1) {
+                newHTML += ' <span style="color: var(--text-muted); margin: 0 2px;">|</span> ';
+            }
+        });
+        
+        navCommands.innerHTML = newHTML;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Load theme first
+    // Load theme and apply section configuration first
     loadTheme();
+    applySectionConfig();
+    
     // Terminal typing effect
     const typingText = document.querySelector('.typing-text');
     const loadingText = document.querySelector('.loading');
