@@ -521,29 +521,30 @@ Use Ctrl+T to quickly toggle theme or click the button in terminal header.`
             
             about: {
                 description: 'Show information about Dipin',
-                action: () => `Software Engineer passionate about building scalable applications.
-Skills: JavaScript, Python, React, Node.js, Docker, AWS
-Currently working on exciting projects and always learning new technologies.`
+                action: () => `Software Developer with 6+ years of experience in Python and C++ specializing in simulation software and automation.
+Currently R&D Engineer II at Ansys, core contributor to Ansys Mechanical software and PyMechanical maintainer.
+Strong mathematical background with expertise in robotics, AI, and DevOps workflows.`
             },
             
             skills: {
                 description: 'List technical skills',
                 action: () => `Technical Skills:
-• Frontend: JavaScript, React, HTML5, CSS3, TypeScript
-• Backend: Node.js, Python, Express, FastAPI
-• Database: MongoDB, PostgreSQL, Redis
-• DevOps: Docker, AWS, CI/CD, Git
-• Tools: VS Code, Terminal, Postman`
+• Programming: C/C++, Python, JavaScript, HTML, CSS, MATLAB, XML, SQL, LaTeX
+• Tools: Visual Studio, VS Code, Git, Microsoft Azure, Linux, GitHub, CI/CD, Jupyter
+• CAE Software: Ansys, Abaqus, SimLab, Hypermesh, UG NX
+• Specialties: PyAnsys Libraries, Simulation Software, Automation, DevOps
+• Soft Skills: Problem-solving, Leadership, Six Sigma Black Belt`
             },
             
             projects: {
                 description: 'Show recent projects',
                 action: () => `Recent Projects:
-• TaskFlow Pro - Full-stack task management with real-time collaboration
-• ML Analytics Engine - Machine learning pipeline with Docker
-• Weather Dashboard - React app with location-based forecasts
-• URL Shortener API - High-performance Node.js REST API
-Type 'open projects' to view the projects page.`
+• PyAnsys Open Source Libraries - Core contributor to simulation software packages
+• Classification of Rice using AI - Genetic Fuzzy Cascading system with 94.36% accuracy
+• Real-time Path Planning - Dijkstra and A* algorithms for dynamic obstacle avoidance
+• MASTA Efficiency Modules - 12 different C++ modules for transmission optimization
+• SimLab Automation - JavaScript-based meshing automation for simulation analysis
+Type 'open projects' to view detailed project information.`
             },
             
             blog: {
@@ -558,40 +559,43 @@ Type 'open blog' to view all posts.`
             contact: {
                 description: 'Show contact information',
                 action: () => `Contact Information:
-📧 Email: dipin.nair@example.com
-🐙 GitHub: github.com/nairdk
-💼 LinkedIn: linkedin.com/in/dipin-nair
-📍 Location: Available for remote opportunities`
+📧 Email: dipinknair619@gmail.com
+🐙 GitHub: github.com/dipinknair
+💼 LinkedIn: linkedin.com/in/dipinknair619
+📱 Phone: +1 (513) 620-0022
+📍 Location: Austin, TX`
             },
             
             education: {
                 description: 'Show educational background',
                 action: () => `Educational Background:
-[2016-2020] Master of Science in Computer Science
-🎓 Stanford University
-• GPA: 3.8/4.0
-• Specialization: Machine Learning & Distributed Systems
-• Thesis: "Optimizing Large-Scale Distributed Machine Learning Systems"
+[2021-2023] Master of Science in Mechanical Engineering
+🎓 University of Cincinnati
+• GPA: 4.0/4.0 (Perfect GPA)
+• Specialization: Engineering Simulation and Automation
+• Research: AI Techniques for Classification Systems
 
-[2012-2016] Bachelor of Science in Electrical Engineering & Computer Science
-🎓 UC Berkeley  
-• GPA: 3.7/4.0 (Major GPA: 3.9/4.0)
-• Senior Project: Real-time IoT Data Processing Platform
-• Activities: ACM Programming Team, Engineering Honor Society`
+[2012-2016] Bachelor of Technology in Mechanical Engineering
+🎓 Indian Institute of Technology, Hyderabad
+• GPA: 8.24/10
+• Strong foundation in Engineering Mathematics and Physics
+• Technical projects in manufacturing and automation systems`
             },
             
             experience: {
                 description: 'Show work experience',
                 action: () => `Work Experience:
-[2023-present] Senior Software Engineer
-• Led development of scalable web applications
-• Mentored junior developers
-• Improved system performance by 40%
+[2023-present] R&D Engineer II - Ansys Inc.
+• Developed PyAnsys Open Source Libraries and supported Ansys Mechanical production
+• Conducted Scrum meetings for PyMechanical Python package
+• Worked with Linear Dynamics team for new ANSYS Mechanical features
+• Made major contributions through Azure and ARM testing
 
-[2021-2023] Software Engineer  
-• Built REST APIs and microservices
-• Collaborated with cross-functional teams
-• Implemented CI/CD pipelines`
+[2016-2020] Senior Engineer - General Motors
+• Earned Design for Six Sigma Black Belt supervising 2 projects
+• Coordinated 12 efficiency modules in MASTA using C++
+• Led team of 4 to automate meshing in SimLab with JavaScript
+• Automated Abaqus modeling reducing 85% of man hours`
             },
             
             resume: {
