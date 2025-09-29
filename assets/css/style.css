@@ -267,6 +267,96 @@ body {
     color: var(--text-primary);
 }
 
+/* Enhanced Experience Styles */
+.company-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.job-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.achievements {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-left: 0;
+}
+
+/* Education Section */
+.education-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-blue);
+}
+
+.edu-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.edu-details {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-left: 20px;
+}
+
+.degree-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.university-name {
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.degree-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.academic-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gpa {
+    color: var(--accent-yellow);
+    font-weight: bold;
+    background: rgba(229, 192, 123, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    font-size: 0.9rem;
+}
+
+.coursework {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* Projects Section */
 .project-item {
     margin-bottom: 20px;
