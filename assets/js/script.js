@@ -439,11 +439,7 @@ Terminal Portfolio Help:
             'help': {
                 description: 'Show available commands',
                 action: () => `Available commands:
-
-THEME:
 • theme - Switch between light/dark themes
-
-PORTFOLIO COMMANDS:
 • about - Show information about me
 • skills - Display technical skills
 • experience - View work experience
@@ -453,7 +449,6 @@ PORTFOLIO COMMANDS:
 • resume - Download my resume
 • contact - Get my contact information
 
-OTHER COMMANDS AVAILABLE:
 • help, clear, whoami, pwd, ls, echo, date
 
 Use Ctrl+T to quickly toggle theme or click the button in terminal header.`

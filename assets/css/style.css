@@ -27,15 +27,15 @@
     --bg-primary: rgba(248, 248, 250, 0.95);
     --bg-secondary: rgba(240, 240, 242, 0.9);
     --bg-tertiary: rgba(230, 230, 235, 0.8);
-    --text-primary: rgba(50, 50, 50, 0.9);
-    --text-secondary: rgba(80, 80, 85, 0.8);
-    --text-muted: rgba(120, 120, 125, 0.7);
-    --accent-green: rgba(40, 167, 69, 0.8);
-    --accent-blue: rgba(0, 123, 255, 0.8);
-    --accent-yellow: rgba(255, 193, 7, 0.8);
+    --text-primary: rgba(40, 45, 50, 0.9);
+    --text-secondary: rgba(75, 85, 95, 0.8);
+    --text-muted: rgba(110, 120, 130, 0.7);
+    --accent-green: rgba(25, 135, 84, 0.8);
+    --accent-blue: rgba(13, 110, 253, 0.8);
+    --accent-yellow: rgba(203, 161, 33, 0.9);
     --accent-red: rgba(220, 53, 69, 0.8);
-    --border-color: rgba(100, 100, 105, 0.4);
-    --shadow: rgba(0, 0, 0, 0.2);
+    --border-color: rgba(108, 117, 125, 0.3);
+    --shadow: rgba(0, 0, 0, 0.15);
 }
 
 /* Light theme background gradient */
@@ -576,7 +576,7 @@ body {
 }
 
 .view-all-btn:hover .output {
-    transform: translateX(3px);
+    transform: translateX(1px);
 }
 
 /* Blog Section */
