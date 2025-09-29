@@ -192,9 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const downloadBtn = document.getElementById('downloadResume');
         if (downloadBtn) {
             downloadBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Simulate download process
+                // Let the download proceed naturally, but add visual feedback
                 const originalText = this.innerHTML;
                 this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
                 this.style.backgroundColor = 'rgba(255, 193, 7, 0.7)';
@@ -207,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         this.innerHTML = originalText;
                         this.style.backgroundColor = '';
                     }, 2000);
-                }, 2000);
+                }, 1000);
             });
         }
     }
@@ -471,9 +469,13 @@ Type 'open blog' to view all posts.`
             resume: {
                 description: 'Download resume',
                 action: () => {
-                    // Trigger resume download
-                    const downloadBtn = document.getElementById('downloadResume');
-                    if (downloadBtn) downloadBtn.click();
+                    // Trigger actual resume download
+                    const link = document.createElement('a');
+                    link.href = 'assets/documents/resume.pdf';
+                    link.download = 'Dipin_Nair_Resume.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
                     return 'Resume download initiated...';
                 }
             },
