@@ -7,7 +7,7 @@
 }
 
 :root {
-    /* Terminal Color Palette - Muted & Transparent */
+    /* Terminal Color Palette - Muted & Transparent - Dark Theme */
     --bg-primary: rgba(18, 18, 18, 0.95);
     --bg-secondary: rgba(30, 30, 30, 0.9);
     --bg-tertiary: rgba(40, 40, 40, 0.8);
@@ -20,6 +20,62 @@
     --accent-red: rgba(220, 53, 69, 0.7);
     --border-color: rgba(68, 68, 68, 0.6);
     --shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    --bg-primary: rgba(248, 248, 250, 0.95);
+    --bg-secondary: rgba(240, 240, 242, 0.9);
+    --bg-tertiary: rgba(230, 230, 235, 0.8);
+    --text-primary: rgba(50, 50, 50, 0.9);
+    --text-secondary: rgba(80, 80, 85, 0.8);
+    --text-muted: rgba(120, 120, 125, 0.7);
+    --accent-green: rgba(40, 167, 69, 0.8);
+    --accent-blue: rgba(0, 123, 255, 0.8);
+    --accent-yellow: rgba(255, 193, 7, 0.8);
+    --accent-red: rgba(220, 53, 69, 0.8);
+    --border-color: rgba(100, 100, 105, 0.4);
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* Light theme background gradient */
+[data-theme="light"] body {
+    background: linear-gradient(135deg, 
+        rgba(245, 245, 250, 0.95), 
+        rgba(235, 235, 245, 0.9), 
+        rgba(225, 225, 240, 0.85));
+}
+
+/* Theme Toggle Button in Header */
+.theme-toggle-header {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-blue);
+    transform: scale(1.05);
+}
+
+.theme-toggle span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover span {
+    transform: rotate(15deg);
 }
 
 body {

@@ -1,5 +1,44 @@
 // Terminal Portfolio - Interactive JavaScript
+
+// Theme toggle functionality
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update toggle button icon
+    const themeIcon = document.getElementById('themeIcon');
+    if (themeIcon) {
+        themeIcon.textContent = newTheme === 'light' ? '☀️' : '🌙';
+    }
+    
+    return `Theme switched to ${newTheme} mode`;
+}
+
+// Load saved theme on page load
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    const themeIcon = document.getElementById('themeIcon');
+    if (themeIcon) {
+        themeIcon.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+    }
+}
+
+// Keyboard shortcut for theme toggle
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key === 't') {
+        e.preventDefault();
+        toggleTheme();
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Load theme first
+    loadTheme();
     // Terminal typing effect
     const typingText = document.querySelector('.typing-text');
     const loadingText = document.querySelector('.loading');
@@ -397,13 +436,33 @@ Terminal Portfolio Help:
         
         // Terminal commands
         const commands = {
-            help: {
+            'help': {
                 description: 'Show available commands',
+                action: () => `Available commands:
+
+THEME:
+• theme - Switch between light/dark themes
+
+PORTFOLIO COMMANDS:
+• about - Show information about me
+• skills - Display technical skills
+• experience - View work experience
+• education - Show educational background
+• projects - Browse my projects
+• blog - Read my blog posts
+• resume - Download my resume
+• contact - Get my contact information
+
+OTHER COMMANDS AVAILABLE:
+• help, clear, whoami, pwd, ls, echo, date
+
+Use Ctrl+T to quickly toggle theme or click the button in terminal header.`
+            },
+            'theme': {
+                description: 'Toggle between light/dark themes',
                 action: () => {
-                    const commandList = Object.keys(commands).map(cmd => 
-                        `  ${cmd.padEnd(12)} - ${commands[cmd].description}`
-                    ).join('\n');
-                    return `Available commands:\n${commandList}`;
+                    toggleTheme();
+                    return 'Theme toggled! You can also use Ctrl+T or the button in the terminal header.';
                 }
             },
             
