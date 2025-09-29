@@ -564,6 +564,22 @@ Type 'open blog' to view all posts.`
 📍 Location: Available for remote opportunities`
             },
             
+            education: {
+                description: 'Show educational background',
+                action: () => `Educational Background:
+[2016-2020] Master of Science in Computer Science
+🎓 Stanford University
+• GPA: 3.8/4.0
+• Specialization: Machine Learning & Distributed Systems
+• Thesis: "Optimizing Large-Scale Distributed Machine Learning Systems"
+
+[2012-2016] Bachelor of Science in Electrical Engineering & Computer Science
+🎓 UC Berkeley  
+• GPA: 3.7/4.0 (Major GPA: 3.9/4.0)
+• Senior Project: Real-time IoT Data Processing Platform
+• Activities: ACM Programming Team, Engineering Honor Society`
+            },
+            
             experience: {
                 description: 'Show work experience',
                 action: () => `Work Experience:
