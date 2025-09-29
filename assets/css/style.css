@@ -30,9 +30,9 @@
     --text-primary: rgba(40, 45, 50, 0.9);
     --text-secondary: rgba(75, 85, 95, 0.8);
     --text-muted: rgba(110, 120, 130, 0.7);
-    --accent-green: rgba(25, 135, 84, 0.8);
+    --accent-green: rgba(84, 19, 19, 0.8);
     --accent-blue: rgba(13, 110, 253, 0.8);
-    --accent-yellow: rgba(203, 161, 33, 0.9);
+    --accent-yellow: rgba(33, 124, 47, 0.9);
     --accent-red: rgba(220, 53, 69, 0.8);
     --border-color: rgba(108, 117, 125, 0.3);
     --shadow: rgba(0, 0, 0, 0.15);
@@ -48,7 +48,7 @@
 
 /* Light theme terminal window background */
 [data-theme="light"] .terminal-window {
-    background: rgba(240, 240, 245, 0.95);
+    background: rgba(254, 247, 233, 0.95);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
