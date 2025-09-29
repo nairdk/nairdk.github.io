@@ -8,10 +8,14 @@ function toggleTheme() {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     
-    // Update toggle button icon
+    // Update toggle button icon classes
     const themeIcon = document.getElementById('themeIcon');
     if (themeIcon) {
-        themeIcon.textContent = newTheme === 'light' ? '☀️' : '🌙';
+        if (newTheme === 'light') {
+            themeIcon.className = 'theme-icon theme-icon-light';
+        } else {
+            themeIcon.className = 'theme-icon theme-icon-dark';
+        }
     }
     
     return `Theme switched to ${newTheme} mode`;
@@ -24,7 +28,11 @@ function loadTheme() {
     
     const themeIcon = document.getElementById('themeIcon');
     if (themeIcon) {
-        themeIcon.textContent = savedTheme === 'light' ? '☀️' : '🌙';
+        if (savedTheme === 'light') {
+            themeIcon.className = 'theme-icon theme-icon-light';
+        } else {
+            themeIcon.className = 'theme-icon theme-icon-dark';
+        }
     }
 }
 
