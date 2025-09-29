@@ -285,6 +285,16 @@ body {
     color: var(--accent-green);
 }
 
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card-link:hover {
+    color: inherit;
+}
+
 .file-icon {
     font-size: 16px;
 }
@@ -312,6 +322,7 @@ body {
     border-radius: 6px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -363,6 +374,16 @@ body {
     color: var(--accent-green);
 }
 
+.blog-post-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-post-link:hover {
+    color: inherit;
+}
+
 .blog-desc {
     color: var(--text-muted);
     margin-left: 25px;
@@ -382,6 +403,7 @@ body {
     background: var(--bg-secondary);
     border-radius: 4px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .blog-post:hover {
