@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Dipin Nair</title>
+    <meta name="description" content="Software engineering projects and open-source contributions">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn red"></span>
+                <span class="btn yellow"></span>
+                <span class="btn green"></span>
+            </div>
+            <div class="terminal-title">projects@dipin-portfolio:~$</div>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">projects@dipin:~$</span>
+                <span class="typing-text">find ./projects -type f -name "*.md" | sort</span>
+            </div>
+            
+            <div class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">~/portfolio</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">projects</span>
+            </div>
+            
+            <!-- Projects Header -->
+            <section class="projects-header">
+                <div class="section-header">
+                    <span class="prompt">cat@projects:~$</span>
+                    <span class="command">head README.md</span>
+                </div>
+                <div class="projects-intro">
+                    <h1>Projects Portfolio</h1>
+                    <p>A collection of software engineering projects, open-source contributions, and technical experiments.</p>
+                    <div class="projects-stats">
+                        <span class="stat">🚀 Active projects: <strong>8</strong></span>
+                        <span class="stat">⭐ GitHub stars: <strong>245</strong></span>
+                        <span class="stat">🔧 Technologies: <strong>12+</strong></span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Project Filters -->
+            <section class="project-filters">
+                <div class="section-header">
+                    <span class="prompt">filter@projects:~$</span>
+                    <span class="command">grep -r "tech-stack" projects/</span>
+                </div>
+                <div class="filter-controls">
+                    <div class="tech-filters">
+                        <button class="tech-filter active" data-tech="all">all</button>
+                        <button class="tech-filter" data-tech="javascript">JavaScript</button>
+                        <button class="tech-filter" data-tech="python">Python</button>
+                        <button class="tech-filter" data-tech="react">React</button>
+                        <button class="tech-filter" data-tech="nodejs">Node.js</button>
+                        <button class="tech-filter" data-tech="docker">Docker</button>
+                    </div>
+                    <div class="sort-controls">
+                        <select class="sort-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="name">Alphabetical</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Featured Projects -->
+            <section class="featured-projects">
+                <div class="section-header">
+                    <span class="prompt">featured@projects:~$</span>
+                    <span class="command">ls -la featured/</span>
+                </div>
+                
+                <div class="featured-grid">
+                    <div class="featured-project" data-tech="javascript react nodejs">
+                        <div class="project-terminal">
+                            <div class="project-terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn red"></span>
+                                    <span class="btn yellow"></span>
+                                    <span class="btn green"></span>
+                                </div>
+                                <div class="project-title">TaskFlow Pro</div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-preview">
+                                    <div class="ascii-demo">
+┌─────────────────────────────────┐
+│  📋 TaskFlow Pro Dashboard      │
+│                                 │
+│  ✓ Task Management System       │
+│  ✓ Team Collaboration          │
+│  ✓ Real-time Updates           │
+│  ✓ Analytics & Reporting       │
+│                                 │
+│  🚀 Built with React & Node.js  │
+└─────────────────────────────────┘
+                                    </div>
+                                </div>
+                                <div class="project-details">
+                                    <p>Full-stack task management application with real-time collaboration features, built using React, Node.js, and WebSocket technology.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">Socket.io</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="project-details/taskflow-pro.html" class="project-link">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </a>
+                                        <a href="https://github.com/nairdk/taskflow-pro" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                        <a href="#" class="project-link">
+                                            <i class="fas fa-external-link-alt"></i> Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-project" data-tech="python docker">
+                        <div class="project-terminal">
+                            <div class="project-terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="btn red"></span>
+                                    <span class="btn yellow"></span>
+                                    <span class="btn green"></span>
+                                </div>
+                                <div class="project-title">ML Analytics Engine</div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-preview">
+                                    <div class="ascii-demo">
+┌─────────────────────────────────┐
+│  🤖 ML Analytics Engine         │
+│                                 │
+│  ● Data Processing Pipeline     │
+│  ● Predictive Models           │
+│  ● Real-time Analytics         │
+│  ● Visualization Dashboard     │
+│                                 │
+│  🐍 Python + TensorFlow + Docker│
+└─────────────────────────────────┘
+                                    </div>
+                                </div>
+                                <div class="project-details">
+                                    <p>Machine learning pipeline for real-time data analytics with automated model training and deployment using Docker containers.</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">Python</span>
+                                        <span class="tech-badge">TensorFlow</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">FastAPI</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="project-details/ml-analytics.html" class="project-link">
+                                            <i class="fas fa-eye"></i> View Details
+                                        </a>
+                                        <a href="https://github.com/nairdk/ml-analytics" class="project-link" target="_blank">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- All Projects -->
+            <section class="all-projects">
+                <div class="section-header">
+                    <span class="prompt">all@projects:~$</span>
+                    <span class="command">ls -la --color=auto</span>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-tech="javascript react">
+                        <div class="project-header">
+                            <div class="project-icon">📱</div>
+                            <div class="project-meta">
+                                <h3><a href="project-details/weather-app.html">Weather Dashboard</a></h3>
+                                <p class="project-subtitle">React Weather Application</p>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge active">Active</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-description">
+                            <p>Modern weather application with location-based forecasts, interactive maps, and beautiful UI animations.</p>
+                        </div>
+                        
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 23</span>
+                                <span class="stat">🔄 5</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card" data-tech="nodejs javascript">
+                        <div class="project-header">
+                            <div class="project-icon">🔗</div>
+                            <div class="project-meta">
+                                <h3><a href="project-details/url-shortener.html">URL Shortener API</a></h3>
+                                <p class="project-subtitle">Node.js REST API</p>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge active">Active</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-description">
+                            <p>High-performance URL shortening service with analytics, custom domains, and rate limiting.</p>
+                        </div>
+                        
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 45</span>
+                                <span class="stat">🔄 12</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card" data-tech="python docker">
+                        <div class="project-header">
+                            <div class="project-icon">📊</div>
+                            <div class="project-meta">
+                                <h3><a href="project-details/data-visualizer.html">Data Visualizer</a></h3>
+                                <p class="project-subtitle">Python Analytics Tool</p>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge maintenance">Maintenance</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-description">
+                            <p>Interactive data visualization tool for exploring large datasets with custom chart types and export features.</p>
+                        </div>
+                        
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Plotly</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 67</span>
+                                <span class="stat">🔄 18</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card" data-tech="javascript nodejs docker">
+                        <div class="project-header">
+                            <div class="project-icon">🚀</div>
+                            <div class="project-meta">
+                                <h3><a href="project-details/deployment-tool.html">Auto Deploy</a></h3>
+                                <p class="project-subtitle">CI/CD Automation Tool</p>
+                            </div>
+                            <div class="project-status">
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-description">
+                            <p>Automated deployment pipeline with Docker integration, rollback capabilities, and Slack notifications.</p>
+                        </div>
+                        
+                        <div class="project-footer">
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 89</span>
+                                <span class="stat">🔄 24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Open Source Contributions -->
+            <section class="open-source">
+                <div class="section-header">
+                    <span class="prompt">opensource@projects:~$</span>
+                    <span class="command">git log --author="dipin" --oneline</span>
+                </div>
+                
+                <div class="contributions-list">
+                    <div class="contribution-item">
+                        <div class="commit-info">
+                            <span class="commit-hash">a3b2c1d</span>
+                            <span class="commit-date">2025-09-20</span>
+                            <span class="repo-name">facebook/react</span>
+                        </div>
+                        <div class="commit-message">
+                            Fix memory leak in useEffect cleanup function
+                        </div>
+                        <div class="contribution-stats">
+                            <span class="stat">+15 -8</span>
+                            <span class="status merged">Merged</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contribution-item">
+                        <div class="commit-info">
+                            <span class="commit-hash">f4e5d6c</span>
+                            <span class="commit-date">2025-09-15</span>
+                            <span class="repo-name">nodejs/node</span>
+                        </div>
+                        <div class="commit-message">
+                            Add support for ES2024 features in worker threads
+                        </div>
+                        <div class="contribution-stats">
+                            <span class="stat">+42 -12</span>
+                            <span class="status review">In Review</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="terminal-prompt-footer">
+                <span class="prompt">visitor@projects:~$</span>
+                <span class="cursor">_</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/projects.js"></script>
+</body>
+</html>

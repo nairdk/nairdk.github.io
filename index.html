@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipin Nair - Software Engineer</title>
+    <meta name="description" content="Software Engineer Portfolio - Terminal Theme">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn red"></span>
+                <span class="btn yellow"></span>
+                <span class="btn green"></span>
+            </div>
+            <div class="terminal-title">dipin@portfolio:~$</div>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">guest@dipin-portfolio:~$</span>
+                <span class="typing-text">./run_portfolio.sh</span>
+            </div>
+            
+            <div class="output-line">
+                <span class="loading">Loading portfolio...</span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="terminal-nav">
+                <div class="nav-line">
+                    <span class="prompt">navigation@portfolio:~$</span>
+                    <span class="nav-commands">
+                        <a href="#about" class="nav-cmd">./about</a> |
+                        <a href="#experience" class="nav-cmd">./experience</a> |
+                        <a href="#projects" class="nav-cmd">./projects</a> |
+                        <a href="#blog" class="nav-cmd">./blog</a> |
+                        <a href="#resume" class="nav-cmd">./resume</a> |
+                        <a href="#contact" class="nav-cmd">./contact</a>
+                    </span>
+                </div>
+            </nav>
+
+            <!-- About Section -->
+            <section id="about" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">about@dipin:~$</span>
+                    <span class="command">cat about.txt</span>
+                </div>
+                <div class="section-content">
+                    <pre class="ascii-art">
+ ____  _       _         _   _       _      
+|  _ \(_)_ __ (_)_ __   | \ | | __ _(_)_ __ 
+| | | | | '_ \| | '_ \  |  \| |/ _` | | '__|
+| |_| | | |_) | | | | | | |\  | (_| | | |   
+|____/|_| .__/|_|_| |_| |_| \_|\__,_|_|_|   
+        |_|                                 
+                    </pre>
+                    <p class="about-text">
+                        Hello! I'm a passionate Software Engineer with expertise in full-stack development.
+                        I love creating elegant solutions to complex problems and building applications 
+                        that make a difference. Welcome to my digital workspace!
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">experience@dipin:~$</span>
+                    <span class="command">ls -la work_history/</span>
+                </div>
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="file-permissions">-rw-r--r--</span>
+                            <span class="file-date">2023-present</span>
+                            <span class="file-name">senior_software_engineer.txt</span>
+                        </div>
+                        <div class="exp-details">
+                            <strong>Senior Software Engineer</strong> - Company Name<br>
+                            • Led development of scalable web applications<br>
+                            • Mentored junior developers<br>
+                            • Improved system performance by 40%
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="file-permissions">-rw-r--r--</span>
+                            <span class="file-date">2021-2023</span>
+                            <span class="file-name">software_engineer.txt</span>
+                        </div>
+                        <div class="exp-details">
+                            <strong>Software Engineer</strong> - Previous Company<br>
+                            • Built REST APIs and microservices<br>
+                            • Collaborated with cross-functional teams<br>
+                            • Implemented CI/CD pipelines
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">projects@dipin:~$</span>
+                    <span class="command">find ./projects -name "*.md" | head -3</span>
+                </div>
+                <div class="section-content">
+                    <div class="project-item">
+                        <a href="projects/" class="project-link">
+                            <span class="file-icon">📁</span>
+                            <span class="project-name">./projects/</span>
+                        </a>
+                        <p class="project-desc">Browse all my projects and open-source contributions</p>
+                    </div>
+                    
+                    <div class="project-preview">
+                        <div class="project-card">
+                            <h4>Project Alpha</h4>
+                            <p>Full-stack web application with React and Node.js</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <h4>Project Beta</h4>
+                            <p>Machine learning model for data analysis</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">blog@dipin:~$</span>
+                    <span class="command">ls -t blog/ | head -5</span>
+                </div>
+                <div class="section-content">
+                    <div class="blog-item">
+                        <a href="blog/" class="blog-link">
+                            <span class="file-icon">📝</span>
+                            <span class="blog-name">./blog/</span>
+                        </a>
+                        <p class="blog-desc">Latest thoughts on technology, programming, and software engineering</p>
+                    </div>
+                    
+                    <div class="blog-preview">
+                        <div class="blog-post">
+                            <span class="post-date">[2025-09-25]</span>
+                            <span class="post-title">Building Scalable Web Applications</span>
+                        </div>
+                        <div class="blog-post">
+                            <span class="post-date">[2025-09-20]</span>
+                            <span class="post-title">My Journey with React Hooks</span>
+                        </div>
+                        <div class="blog-post">
+                            <span class="post-date">[2025-09-15]</span>
+                            <span class="post-title">Docker Best Practices</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">resume@dipin:~$</span>
+                    <span class="command">cat resume.pdf | head</span>
+                </div>
+                <div class="section-content">
+                    <div class="resume-download">
+                        <a href="#" class="download-btn" id="downloadResume">
+                            <i class="fas fa-download"></i>
+                            Download Resume (PDF)
+                        </a>
+                        <span class="file-info">resume_dipin_nair.pdf (247KB)</span>
+                    </div>
+                    <div class="resume-preview">
+                        <p>Preview available after download. Contains:</p>
+                        <ul>
+                            <li>• Complete work history and achievements</li>
+                            <li>• Technical skills and certifications</li>
+                            <li>• Education and professional development</li>
+                            <li>• Contact information and references</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">contact@dipin:~$</span>
+                    <span class="command">./connect.sh</span>
+                </div>
+                <div class="section-content">
+                    <div class="contact-info">
+                        <p>Let's connect and build something amazing together!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <a href="mailto:dipin.nair@example.com" class="contact-link">
+                                    dipin.nair@example.com
+                                </a>
+                            </div>
+                            
+                            <div class="social-links">
+                                <a href="https://github.com/nairdk" target="_blank" class="social-link" id="githubLink" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                
+                                <a href="https://linkedin.com/in/dipin-nair" target="_blank" class="social-link" id="linkedinLink" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-prompt-footer">
+                        <span class="prompt">visitor@dipin-portfolio:~$</span>
+                        <span class="cursor">_</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

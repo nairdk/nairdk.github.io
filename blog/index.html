@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Dipin Nair</title>
+    <meta name="description" content="Tech blog posts about software engineering, programming, and development">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn red"></span>
+                <span class="btn yellow"></span>
+                <span class="btn green"></span>
+            </div>
+            <div class="terminal-title">blog@dipin-portfolio:~$</div>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">blog@dipin:~$</span>
+                <span class="typing-text">ls -la blog_posts/</span>
+            </div>
+            
+            <div class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">~/portfolio</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">blog</span>
+            </div>
+            
+            <!-- Blog Header -->
+            <section class="blog-header">
+                <div class="section-header">
+                    <span class="prompt">cat@blog:~$</span>
+                    <span class="command">head README.md</span>
+                </div>
+                <div class="blog-intro">
+                    <h1>Dev Blog</h1>
+                    <p>Thoughts, tutorials, and insights from the world of software engineering.</p>
+                    <p class="blog-stats">
+                        <span class="stat">📝 Total posts: <strong id="postCount">3</strong></span>
+                        <span class="stat">🏷️ Categories: <strong>Web Dev, DevOps, Career</strong></span>
+                        <span class="stat">📅 Last updated: <strong>September 2025</strong></span>
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Blog Categories Filter -->
+            <section class="blog-filters">
+                <div class="section-header">
+                    <span class="prompt">filter@blog:~$</span>
+                    <span class="command">grep -r "category" *.md</span>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">all</button>
+                    <button class="filter-btn" data-category="web-dev">web-dev</button>
+                    <button class="filter-btn" data-category="devops">devops</button>
+                    <button class="filter-btn" data-category="career">career</button>
+                    <button class="filter-btn" data-category="tutorial">tutorial</button>
+                </div>
+            </section>
+            
+            <!-- Blog Posts List -->
+            <section class="blog-posts">
+                <div class="section-header">
+                    <span class="prompt">posts@blog:~$</span>
+                    <span class="command">find . -name "*.md" -type f | sort -r</span>
+                </div>
+                
+                <div class="posts-container">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-post" data-category="web-dev">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="file-permissions">-rw-r--r--</span>
+                                <span class="post-date">2025-09-25</span>
+                                <span class="post-size">4.2K</span>
+                                <span class="post-filename">scalable_web_apps.md</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="posts/scalable-web-applications.html">Building Scalable Web Applications</a></h3>
+                            <p class="post-excerpt">
+                                Deep dive into architectural patterns and best practices for building web applications 
+                                that can handle millions of users. From microservices to load balancing strategies.
+                            </p>
+                            <div class="post-tags">
+                                <span class="tag">Architecture</span>
+                                <span class="tag">Scaling</span>
+                                <span class="tag">Performance</span>
+                                <span class="tag">Backend</span>
+                            </div>
+                            <div class="post-stats">
+                                <span class="read-time">📖 8 min read</span>
+                                <span class="views">👁️ 1.2k views</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-post" data-category="career">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="file-permissions">-rw-r--r--</span>
+                                <span class="post-date">2025-09-20</span>
+                                <span class="post-size">3.1K</span>
+                                <span class="post-filename">react_hooks_journey.md</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="posts/react-hooks-journey.html">My Journey with React Hooks</a></h3>
+                            <p class="post-excerpt">
+                                From class components to functional components with hooks - lessons learned, 
+                                pitfalls avoided, and patterns that transformed how I think about React development.
+                            </p>
+                            <div class="post-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Hooks</span>
+                                <span class="tag">Frontend</span>
+                                <span class="tag">Learning</span>
+                            </div>
+                            <div class="post-stats">
+                                <span class="read-time">📖 6 min read</span>
+                                <span class="views">👁️ 890 views</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-post" data-category="devops">
+                        <div class="post-header">
+                            <div class="post-meta">
+                                <span class="file-permissions">-rw-r--r--</span>
+                                <span class="post-date">2025-09-15</span>
+                                <span class="post-size">5.7K</span>
+                                <span class="post-filename">docker_best_practices.md</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h3><a href="posts/docker-best-practices.html">Docker Best Practices for Production</a></h3>
+                            <p class="post-excerpt">
+                                Essential Docker practices every developer should know before deploying to production. 
+                                Security, optimization, and deployment strategies that actually work in the real world.
+                            </p>
+                            <div class="post-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">DevOps</span>
+                                <span class="tag">Production</span>
+                                <span class="tag">Security</span>
+                            </div>
+                            <div class="post-stats">
+                                <span class="read-time">📖 10 min read</span>
+                                <span class="views">👁️ 2.1k views</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="load-more-btn">
+                        <span class="prompt">load@more:~$</span>
+                        <span class="load-text">./load_more_posts.sh</span>
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Blog Footer -->
+            <section class="blog-footer">
+                <div class="section-header">
+                    <span class="prompt">subscribe@blog:~$</span>
+                    <span class="command">./subscribe.sh</span>
+                </div>
+                <div class="subscribe-section">
+                    <h3>Stay Updated</h3>
+                    <p>Get notified when I publish new posts about software engineering and tech insights.</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="your-email@example.com" class="email-input">
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+            
+            <div class="terminal-prompt-footer">
+                <span class="prompt">reader@blog:~$</span>
+                <span class="cursor">_</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/blog.js"></script>
+</body>
+</html>

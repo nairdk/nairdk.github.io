@@ -1,0 +1,370 @@
+/* Blog-specific CSS Extensions */
+
+.breadcrumb {
+    margin: 20px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.breadcrumb-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    color: var(--accent-green);
+}
+
+.breadcrumb-separator {
+    margin: 0 8px;
+    color: var(--text-muted);
+}
+
+.breadcrumb-current {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+/* Blog Header */
+.blog-header .blog-intro {
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-green);
+    margin-bottom: 30px;
+}
+
+.blog-intro h1 {
+    color: var(--text-primary);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.blog-intro p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.blog-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.stat {
+    color: var(--text-muted);
+}
+
+.stat strong {
+    color: var(--accent-blue);
+}
+
+/* Blog Filters */
+.blog-filters {
+    margin-bottom: 40px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.filter-btn {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.filter-btn:hover {
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    border-color: var(--accent-green);
+}
+
+/* Blog Posts */
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-post {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-green);
+}
+
+.blog-post.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.post-header {
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+    font-family: monospace;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.file-permissions {
+    color: var(--accent-blue);
+}
+
+.post-date {
+    color: var(--accent-yellow);
+}
+
+.post-size {
+    color: var(--text-muted);
+}
+
+.post-filename {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.post-content h3 {
+    margin-bottom: 12px;
+}
+
+.post-content h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.post-content h3 a:hover {
+    color: var(--accent-green);
+}
+
+.post-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.post-tags .tag {
+    background: var(--bg-tertiary);
+    color: var(--accent-blue);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.post-tags .tag:hover {
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+    transform: scale(1.05);
+}
+
+.post-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.read-time,
+.views {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Load More */
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.load-more-btn {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 15px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.load-more-btn:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-green);
+    transform: translateY(-2px);
+}
+
+.load-more-btn .prompt {
+    color: var(--accent-green);
+}
+
+.load-more-btn .load-text {
+    color: var(--text-primary);
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.subscribe-section h3 {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.subscribe-section p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.email-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-family: monospace;
+}
+
+.email-input::placeholder {
+    color: var(--text-muted);
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 2px rgba(46, 160, 67, 0.2);
+}
+
+.subscribe-btn {
+    background: var(--accent-green);
+    color: var(--bg-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: var(--accent-blue);
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .post-stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .subscribe-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .email-input {
+        min-width: auto;
+    }
+}
+
+/* Animation for filtering */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-post.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
