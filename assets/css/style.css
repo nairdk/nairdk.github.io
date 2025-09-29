@@ -232,6 +232,15 @@ body {
     background: var(--bg-secondary);
     border-radius: 6px;
     border-left: 3px solid var(--accent-green);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.experience-item:hover {
+    background: rgba(40, 44, 52, 0.9);
+    border-left-color: var(--accent-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .exp-header {
@@ -300,6 +309,15 @@ body {
     background: var(--bg-secondary);
     border-radius: 6px;
     border-left: 3px solid var(--accent-blue);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.education-item:hover {
+    background: rgba(40, 44, 52, 0.9);
+    border-left-color: var(--accent-blue);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .edu-header {
@@ -354,7 +372,10 @@ body {
 
 .coursework {
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 /* Projects Section */
