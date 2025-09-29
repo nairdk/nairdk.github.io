@@ -46,6 +46,12 @@
         rgba(225, 225, 240, 0.85));
 }
 
+/* Light theme terminal window background */
+[data-theme="light"] .terminal-window {
+    background: rgba(240, 240, 245, 0.95);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
 /* Theme Toggle Button in Header */
 .theme-toggle-header {
     display: flex;
@@ -296,6 +302,12 @@ body {
     transform: translateY(-2px);
 }
 
+/* Light theme hover effects */
+[data-theme="light"] .experience-item:hover {
+    background: rgba(230, 230, 235, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .exp-header {
     display: flex;
     align-items: center;
@@ -369,6 +381,12 @@ body {
     background: rgba(40, 44, 52, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
+}
+
+/* Light theme hover effects */
+[data-theme="light"] .education-item:hover {
+    background: rgba(230, 230, 235, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .edu-header {
@@ -491,6 +509,12 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     border-color: var(--accent-green);
+}
+
+/* Light theme project card hover */
+[data-theme="light"] .project-card:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-blue);
 }
 
 .project-card h4 {
