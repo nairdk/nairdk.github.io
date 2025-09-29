@@ -20,14 +20,17 @@
         </div>
         
         <div class="terminal-content">
-            <div class="terminal-line">
-                <span class="prompt">guest@dipin-portfolio:~$</span>
-                <span class="typing-text">./run_portfolio.sh</span>
-            </div>
-            
-            <div class="output-line">
-                <span class="loading">Loading portfolio...</span>
-            </div>
+            <!-- Interactive Terminal Section -->
+            <section class="terminal-section">
+                <div class="section-content">
+                    <div class="terminal-prompt-line">
+                        <span class="prompt">terminal@dipin:~$</span>
+                        <input type="text" class="terminal-input" placeholder="Type 'help' for available commands..." autofocus>
+                        <span class="cursor">_</span>
+                    </div>
+                    <div class="terminal-output" id="terminalOutput"></div>
+                </div>
+            </section>
             
             <!-- Navigation Menu -->
             <nav class="terminal-nav">
@@ -239,11 +242,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="terminal-prompt-footer">
-                        <span class="prompt">visitor@dipin-portfolio:~$</span>
-                        <span class="cursor">_</span>
                     </div>
                 </div>
             </section>

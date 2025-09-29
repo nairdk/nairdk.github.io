@@ -356,6 +356,9 @@ Terminal Portfolio Help:
     // Optional: Add subtle matrix effect (uncomment if desired)
     // createMatrixEffect();
     
+    // Interactive Terminal Functionality
+    setupInteractiveTerminal();
+    
     // Console easter egg
     console.log(`
     ┌─────────────────────────────────────┐
@@ -378,10 +381,255 @@ Terminal Portfolio Help:
     };
     
     window.contact = () => {
-        console.log('Email: your.email@example.com | GitHub: github.com/nairdk');
+        console.log('Email: dipin.nair@example.com | GitHub: github.com/nairdk');
     };
     
     window.projects = () => {
         console.log('Check out my projects at /projects/ or scroll to the projects section!');
     };
+    
+    // Interactive Terminal Setup
+    function setupInteractiveTerminal() {
+        const terminalInput = document.querySelector('.terminal-input');
+        const terminalOutput = document.getElementById('terminalOutput');
+        let commandHistory = [];
+        let historyIndex = -1;
+        
+        if (!terminalInput || !terminalOutput) return;
+        
+        // Terminal commands
+        const commands = {
+            help: {
+                description: 'Show available commands',
+                action: () => {
+                    const commandList = Object.keys(commands).map(cmd => 
+                        `  ${cmd.padEnd(12)} - ${commands[cmd].description}`
+                    ).join('\n');
+                    return `Available commands:\n${commandList}`;
+                }
+            },
+            
+            about: {
+                description: 'Show information about Dipin',
+                action: () => `Software Engineer passionate about building scalable applications.
+Skills: JavaScript, Python, React, Node.js, Docker, AWS
+Currently working on exciting projects and always learning new technologies.`
+            },
+            
+            skills: {
+                description: 'List technical skills',
+                action: () => `Technical Skills:
+• Frontend: JavaScript, React, HTML5, CSS3, TypeScript
+• Backend: Node.js, Python, Express, FastAPI
+• Database: MongoDB, PostgreSQL, Redis
+• DevOps: Docker, AWS, CI/CD, Git
+• Tools: VS Code, Terminal, Postman`
+            },
+            
+            projects: {
+                description: 'Show recent projects',
+                action: () => `Recent Projects:
+• TaskFlow Pro - Full-stack task management with real-time collaboration
+• ML Analytics Engine - Machine learning pipeline with Docker
+• Weather Dashboard - React app with location-based forecasts
+• URL Shortener API - High-performance Node.js REST API
+Type 'open projects' to view the projects page.`
+            },
+            
+            blog: {
+                description: 'Show recent blog posts',
+                action: () => `Recent Blog Posts:
+• Building Scalable Web Applications - Architecture patterns and best practices
+• My Journey with React Hooks - From class components to hooks
+• Docker Best Practices - Production deployment strategies
+Type 'open blog' to view all posts.`
+            },
+            
+            contact: {
+                description: 'Show contact information',
+                action: () => `Contact Information:
+📧 Email: dipin.nair@example.com
+🐙 GitHub: github.com/nairdk
+💼 LinkedIn: linkedin.com/in/dipin-nair
+📍 Location: Available for remote opportunities`
+            },
+            
+            experience: {
+                description: 'Show work experience',
+                action: () => `Work Experience:
+[2023-present] Senior Software Engineer
+• Led development of scalable web applications
+• Mentored junior developers
+• Improved system performance by 40%
+
+[2021-2023] Software Engineer  
+• Built REST APIs and microservices
+• Collaborated with cross-functional teams
+• Implemented CI/CD pipelines`
+            },
+            
+            resume: {
+                description: 'Download resume',
+                action: () => {
+                    // Trigger resume download
+                    const downloadBtn = document.getElementById('downloadResume');
+                    if (downloadBtn) downloadBtn.click();
+                    return 'Resume download initiated...';
+                }
+            },
+            
+            open: {
+                description: 'Open a section (projects, blog, etc.)',
+                action: (args) => {
+                    const section = args[0]?.toLowerCase();
+                    switch (section) {
+                        case 'projects':
+                            window.location.href = 'projects/';
+                            return 'Opening projects page...';
+                        case 'blog':
+                            window.location.href = 'blog/';
+                            return 'Opening blog page...';
+                        case 'github':
+                            window.open('https://github.com/nairdk', '_blank');
+                            return 'Opening GitHub profile...';
+                        case 'linkedin':
+                            window.open('https://linkedin.com/in/dipin-nair', '_blank');
+                            return 'Opening LinkedIn profile...';
+                        default:
+                            return `Unknown section: ${section}. Try 'open projects', 'open blog', 'open github', or 'open linkedin'.`;
+                    }
+                }
+            },
+            
+            goto: {
+                description: 'Navigate to a section (about, projects, blog, contact)',
+                action: (args) => {
+                    const section = args[0]?.toLowerCase();
+                    const element = document.getElementById(section);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                        return `Navigating to ${section} section...`;
+                    }
+                    return `Section '${section}' not found. Try: about, experience, projects, blog, resume, contact`;
+                }
+            },
+            
+            clear: {
+                description: 'Clear terminal output',
+                action: () => {
+                    terminalOutput.innerHTML = '';
+                    terminalOutput.classList.remove('visible');
+                    return '';
+                }
+            },
+            
+            date: {
+                description: 'Show current date',
+                action: () => new Date().toLocaleString()
+            },
+            
+            whoami: {
+                description: 'Show current user',
+                action: () => 'terminal@dipin'
+            },
+            
+            pwd: {
+                description: 'Print working directory',
+                action: () => '/home/dipin/portfolio'
+            },
+            
+            ls: {
+                description: 'List directory contents',
+                action: () => `total 8
+drwxr-xr-x  about/
+drwxr-xr-x  experience/
+drwxr-xr-x  projects/
+drwxr-xr-x  blog/
+-rw-r--r--  resume.pdf
+drwxr-xr-x  contact/`
+            },
+            
+            echo: {
+                description: 'Display text',
+                action: (args) => args.join(' ') || ''
+            }
+        };
+        
+        // Handle command input
+        terminalInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const command = this.value.trim();
+                
+                if (command) {
+                    executeCommand(command);
+                    commandHistory.unshift(command);
+                    if (commandHistory.length > 50) commandHistory.pop();
+                    historyIndex = -1;
+                }
+                
+                this.value = '';
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    this.value = commandHistory[historyIndex];
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    this.value = commandHistory[historyIndex];
+                } else if (historyIndex === 0) {
+                    historyIndex = -1;
+                    this.value = '';
+                }
+            } else if (e.key === 'Tab') {
+                e.preventDefault();
+                // Auto-complete functionality
+                const partial = this.value.toLowerCase();
+                const matches = Object.keys(commands).filter(cmd => cmd.startsWith(partial));
+                if (matches.length === 1) {
+                    this.value = matches[0];
+                } else if (matches.length > 1) {
+                    addToOutput(`visitor@dipin-portfolio:~$ ${this.value}`, 'command');
+                    addToOutput(`Possible completions: ${matches.join(', ')}`, 'response');
+                }
+            }
+        });
+        
+        function executeCommand(input) {
+            const [commandName, ...args] = input.split(' ');
+            const command = commands[commandName.toLowerCase()];
+            
+            // Show the command in terminal
+            addToOutput(`terminal@dipin:~$ ${input}`, 'command');
+            
+            if (command) {
+                const result = command.action(args);
+                if (result) {
+                    addToOutput(result, 'response');
+                }
+            } else {
+                addToOutput(`Command not found: ${commandName}. Type 'help' for available commands.`, 'error');
+            }
+            
+            // Auto-scroll to bottom
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
+        
+        function addToOutput(text, type = 'response') {
+            terminalOutput.classList.add('visible');
+            const line = document.createElement('div');
+            line.className = `output-line ${type}`;
+            line.textContent = text;
+            terminalOutput.appendChild(line);
+        }
+        
+        // Show welcome message
+        setTimeout(() => {
+            addToOutput("Welcome to Dipin's Interactive Portfolio Terminal!", 'success');
+            addToOutput("Type 'help' to see available commands or 'about' to learn more about me.", 'response');
+        }, 2000);
+    }
 });
